@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="QRT-Vj-UxP">
-                                                    <rect key="frame" x="20" y="11" width="374" height="202"/>
+                                                    <rect key="frame" x="16" y="4" width="382" height="216"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -37,28 +37,28 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-GN-NVM">
+                                                    <rect key="frame" x="356" y="4" width="42" height="42"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="LikeOn"/>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 июня 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k48-aH-IgA">
-                                                    <rect key="frame" x="28" y="189" width="79" height="16"/>
+                                                    <rect key="frame" x="24" y="196" width="79" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" name="YP White (iOS)"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-GN-NVM">
-                                                    <rect key="frame" x="364" y="11" width="30" height="27"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="LikeOn"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QRT-Vj-UxP" firstAttribute="leading" secondItem="79v-Of-OD5" secondAttribute="leadingMargin" id="0YN-Yv-B3D"/>
-                                                <constraint firstItem="QRT-Vj-UxP" firstAttribute="bottom" secondItem="k48-aH-IgA" secondAttribute="bottom" constant="8" id="1kP-XQ-Uls"/>
-                                                <constraint firstItem="QRT-Vj-UxP" firstAttribute="trailing" secondItem="79v-Of-OD5" secondAttribute="trailingMargin" id="35o-LR-m76"/>
                                                 <constraint firstItem="k48-aH-IgA" firstAttribute="leading" secondItem="QRT-Vj-UxP" secondAttribute="leading" constant="8" id="4gS-S4-yDJ"/>
+                                                <constraint firstItem="QRT-Vj-UxP" firstAttribute="bottom" secondItem="k48-aH-IgA" secondAttribute="bottom" constant="8" id="5hz-kn-iGP"/>
+                                                <constraint firstItem="QRT-Vj-UxP" firstAttribute="top" secondItem="79v-Of-OD5" secondAttribute="top" constant="4" id="8ej-1r-9Xg"/>
                                                 <constraint firstItem="nug-GN-NVM" firstAttribute="top" secondItem="QRT-Vj-UxP" secondAttribute="top" id="VEE-eD-tM7"/>
-                                                <constraint firstItem="QRT-Vj-UxP" firstAttribute="top" secondItem="79v-Of-OD5" secondAttribute="topMargin" id="nKc-Fi-d94"/>
+                                                <constraint firstAttribute="trailing" secondItem="QRT-Vj-UxP" secondAttribute="trailing" constant="16" id="ofP-Mk-Ahf"/>
+                                                <constraint firstItem="QRT-Vj-UxP" firstAttribute="leading" secondItem="79v-Of-OD5" secondAttribute="leading" constant="16" id="rg4-yn-rYz"/>
                                                 <constraint firstItem="QRT-Vj-UxP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k48-aH-IgA" secondAttribute="trailing" constant="8" id="uyD-dD-xNQ"/>
                                                 <constraint firstItem="QRT-Vj-UxP" firstAttribute="trailing" secondItem="nug-GN-NVM" secondAttribute="trailing" id="wUa-9Q-EnW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="QRT-Vj-UxP" secondAttribute="bottom" id="xwT-Ko-J74"/>
+                                                <constraint firstAttribute="bottom" secondItem="QRT-Vj-UxP" secondAttribute="bottom" constant="4" id="y5V-fy-P21"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,7 +95,7 @@
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
-        <image name="LikeOn" width="30" height="27"/>
+        <image name="LikeOn" width="42" height="42"/>
         <namedColor name="YP Black (iOS)">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
