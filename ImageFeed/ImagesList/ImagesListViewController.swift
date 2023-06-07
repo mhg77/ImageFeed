@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageFeedViewController: UIViewController {
+class ImagesListViewController: UIViewController {
     
     @IBOutlet private var tableView: UITableView!
     
@@ -17,7 +17,7 @@ class ImageFeedViewController: UIViewController {
     }
 }
 
-extension ImageFeedViewController: UITableViewDataSource {
+extension ImagesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -28,7 +28,7 @@ extension ImageFeedViewController: UITableViewDataSource {
     }
 }
 
-extension ImageFeedViewController: UITableViewDelegate {
+extension ImagesListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
