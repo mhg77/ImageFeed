@@ -15,6 +15,7 @@
 		2730EBA42A2CAAC50099E765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2730EBA22A2CAAC50099E765 /* LaunchScreen.storyboard */; };
 		2745374D2A30F2FD00E7426F /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745374C2A30F2FD00E7426F /* ImagesListCell.swift */; };
 		2792509F2A4881F500C324B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792509E2A4881F500C324B3 /* ProfileViewController.swift */; };
+		279250A32A48C75C00C324B3 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279250A22A48C75C00C324B3 /* SingleImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2730EBA52A2CAAC50099E765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2745374C2A30F2FD00E7426F /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		2792509E2A4881F500C324B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		279250A22A48C75C00C324B3 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				2730EB992A2CAAC30099E765 /* SceneDelegate.swift */,
 				279250A12A48822500C324B3 /* Profile */,
 				2745374E2A30F46500E7426F /* ImagesList */,
+				279250A42A48CA6400C324B3 /* SingleImageView */,
 				2730EB9D2A2CAAC30099E765 /* Main.storyboard */,
 				2730EBAB2A2CC6970099E765 /* Resources */,
 			);
@@ -95,6 +98,14 @@
 				2792509E2A4881F500C324B3 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		279250A42A48CA6400C324B3 /* SingleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				279250A22A48C75C00C324B3 /* SingleImageViewController.swift */,
+			);
+			path = SingleImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				2745374D2A30F2FD00E7426F /* ImagesListCell.swift in Sources */,
 				2792509F2A4881F500C324B3 /* ProfileViewController.swift in Sources */,
 				2730EB982A2CAAC30099E765 /* AppDelegate.swift in Sources */,
+				279250A32A48C75C00C324B3 /* SingleImageViewController.swift in Sources */,
 				2730EB9A2A2CAAC30099E765 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,12 +9,12 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
-    @IBOutlet var profileImageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var profileNameLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var logoutButton: UIButton!
+    @IBOutlet private var profileImageView: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var profileNameLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var logoutButton: UIButton!
     
-    @IBAction func didTapLogoutButton() {
+    @IBAction private func didTapLogoutButton() {
     }
 }
