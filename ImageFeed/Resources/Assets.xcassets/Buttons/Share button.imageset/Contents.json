@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ShareButton.png",
+      "filename" : "Sharing.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ShareButton2.png",
+      "filename" : "Sharing2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ShareButton3.png",
+      "filename" : "Sharing3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

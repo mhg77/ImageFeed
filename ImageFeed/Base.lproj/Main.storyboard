@@ -134,8 +134,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tfj-Nb-TLm" secondAttribute="trailing" id="0Mc-b8-NAA"/>
+                                    <constraint firstItem="tfj-Nb-TLm" firstAttribute="height" secondItem="QoD-lQ-9tx" secondAttribute="height" multiplier="0.462054" id="9oo-9H-7d3"/>
                                     <constraint firstItem="tfj-Nb-TLm" firstAttribute="leading" secondItem="YNb-8O-yYu" secondAttribute="leading" id="beN-Ya-FqM"/>
                                     <constraint firstAttribute="bottom" secondItem="tfj-Nb-TLm" secondAttribute="bottom" id="gpn-HG-s3o"/>
+                                    <constraint firstItem="tfj-Nb-TLm" firstAttribute="width" secondItem="QoD-lQ-9tx" secondAttribute="width" id="qk7-EI-nFl"/>
                                     <constraint firstItem="tfj-Nb-TLm" firstAttribute="top" secondItem="YNb-8O-yYu" secondAttribute="top" id="uQN-mz-1C4"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="vHq-Ov-2Ks"/>
@@ -144,6 +146,14 @@
                                     <outlet property="delegate" destination="n63-ls-w1d" id="hjg-hA-NJT"/>
                                 </connections>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YI-Il-S2z" userLabel="Share button">
+                                <rect key="frame" x="182" y="810" width="50" height="50"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Share button"/>
+                                <connections>
+                                    <action selector="didTapShareButton" destination="n63-ls-w1d" eventType="touchUpInside" id="eUJ-tB-Eiv"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej0-xB-plB" userLabel="Backward button">
                                 <rect key="frame" x="8" y="8" width="48" height="48"/>
                                 <constraints>
@@ -160,9 +170,11 @@
                         <viewLayoutGuide key="safeArea" id="rbt-Jk-YTV"/>
                         <color key="backgroundColor" name="YP Black (iOS)"/>
                         <constraints>
+                            <constraint firstItem="1YI-Il-S2z" firstAttribute="centerX" secondItem="rbt-Jk-YTV" secondAttribute="centerX" id="48r-9m-vuB"/>
                             <constraint firstItem="ej0-xB-plB" firstAttribute="leading" secondItem="rbt-Jk-YTV" secondAttribute="leading" constant="8" id="Kfm-vJ-Ff6"/>
                             <constraint firstItem="rbt-Jk-YTV" firstAttribute="trailing" secondItem="YNb-8O-yYu" secondAttribute="trailing" id="WeQ-2G-Hi6"/>
                             <constraint firstItem="YNb-8O-yYu" firstAttribute="leading" secondItem="rbt-Jk-YTV" secondAttribute="leading" id="eBp-BM-nhr"/>
+                            <constraint firstItem="rbt-Jk-YTV" firstAttribute="bottom" secondItem="1YI-Il-S2z" secondAttribute="bottom" constant="36" id="gbz-VB-jQ5"/>
                             <constraint firstAttribute="bottom" secondItem="YNb-8O-yYu" secondAttribute="bottom" id="mms-iN-X95"/>
                             <constraint firstItem="YNb-8O-yYu" firstAttribute="top" secondItem="gwh-dI-yQP" secondAttribute="top" id="qfY-B6-ynD"/>
                             <constraint firstItem="ej0-xB-plB" firstAttribute="top" secondItem="rbt-Jk-YTV" secondAttribute="top" constant="8" id="r1J-WR-9K8"/>
@@ -269,6 +281,7 @@
         <image name="LikeOn" width="42" height="42"/>
         <image name="Logout button" width="24" height="24"/>
         <image name="Profile image" width="70" height="70"/>
+        <image name="Share button" width="50" height="50"/>
         <image name="Tab editorial active" width="30" height="30"/>
         <image name="Tab profile active" width="30" height="30"/>
         <namedColor name="YP Black (iOS)">
