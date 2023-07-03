@@ -125,9 +125,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="tfj-Nb-TLm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNb-8O-yYu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="414" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="tfj-Nb-TLm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tfj-Nb-TLm" secondAttribute="trailing" id="0Mc-b8-NAA"/>
+                                    <constraint firstItem="tfj-Nb-TLm" firstAttribute="leading" secondItem="YNb-8O-yYu" secondAttribute="leading" id="beN-Ya-FqM"/>
+                                    <constraint firstAttribute="bottom" secondItem="tfj-Nb-TLm" secondAttribute="bottom" id="gpn-HG-s3o"/>
+                                    <constraint firstItem="tfj-Nb-TLm" firstAttribute="top" secondItem="YNb-8O-yYu" secondAttribute="top" id="uQN-mz-1C4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vHq-Ov-2Ks"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="QoD-lQ-9tx"/>
+                                <connections>
+                                    <outlet property="delegate" destination="n63-ls-w1d" id="hjg-hA-NJT"/>
+                                </connections>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej0-xB-plB" userLabel="Backward button">
                                 <rect key="frame" x="8" y="8" width="48" height="48"/>
                                 <constraints>
@@ -137,29 +153,30 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="Backward button"/>
                                 <connections>
-                                    <action selector="didTapBackButton:" destination="n63-ls-w1d" eventType="touchUpInside" id="MOq-3b-TAW"/>
+                                    <action selector="didTapBackButton" destination="n63-ls-w1d" eventType="touchUpInside" id="pzz-M7-yFs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rbt-Jk-YTV"/>
                         <color key="backgroundColor" name="YP Black (iOS)"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tfj-Nb-TLm" secondAttribute="trailing" id="2Ss-Jp-uFW"/>
-                            <constraint firstItem="tfj-Nb-TLm" firstAttribute="top" secondItem="gwh-dI-yQP" secondAttribute="top" id="8hV-yr-v1x"/>
-                            <constraint firstAttribute="bottom" secondItem="tfj-Nb-TLm" secondAttribute="bottom" id="BIm-bm-fDM"/>
                             <constraint firstItem="ej0-xB-plB" firstAttribute="leading" secondItem="rbt-Jk-YTV" secondAttribute="leading" constant="8" id="Kfm-vJ-Ff6"/>
-                            <constraint firstItem="tfj-Nb-TLm" firstAttribute="leading" secondItem="gwh-dI-yQP" secondAttribute="leading" id="c5I-3e-kc5"/>
+                            <constraint firstItem="rbt-Jk-YTV" firstAttribute="trailing" secondItem="YNb-8O-yYu" secondAttribute="trailing" id="WeQ-2G-Hi6"/>
+                            <constraint firstItem="YNb-8O-yYu" firstAttribute="leading" secondItem="rbt-Jk-YTV" secondAttribute="leading" id="eBp-BM-nhr"/>
+                            <constraint firstAttribute="bottom" secondItem="YNb-8O-yYu" secondAttribute="bottom" id="mms-iN-X95"/>
+                            <constraint firstItem="YNb-8O-yYu" firstAttribute="top" secondItem="gwh-dI-yQP" secondAttribute="top" id="qfY-B6-ynD"/>
                             <constraint firstItem="ej0-xB-plB" firstAttribute="top" secondItem="rbt-Jk-YTV" secondAttribute="top" constant="8" id="r1J-WR-9K8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qs7-bZ-kw6"/>
                     <connections>
                         <outlet property="imageView" destination="tfj-Nb-TLm" id="uFq-qt-vgK"/>
+                        <outlet property="scrollView" destination="YNb-8O-yYu" id="rRF-m7-8dJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73M-8z-yqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="-364"/>
+            <point key="canvasLocation" x="850.72463768115949" y="-364.28571428571428"/>
         </scene>
         <!--Profile-->
         <scene sceneID="9YW-MV-LLO">
@@ -209,6 +226,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="Logout button"/>
                                 <connections>
+                                    <action selector="didTapLogoutButton" destination="5NZ-6V-o9x" eventType="touchUpInside" id="rbC-MJ-n0e"/>
                                     <action selector="didTapLogoutButton:" destination="5NZ-6V-o9x" eventType="touchUpInside" id="NFB-sl-8IL"/>
                                 </connections>
                             </button>
