@@ -129,12 +129,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="414" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="tfj-Nb-TLm">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tfj-Nb-TLm" secondAttribute="trailing" id="0Mc-b8-NAA"/>
-                                    <constraint firstItem="tfj-Nb-TLm" firstAttribute="height" secondItem="QoD-lQ-9tx" secondAttribute="height" multiplier="0.462054" id="9oo-9H-7d3"/>
+                                    <constraint firstItem="tfj-Nb-TLm" firstAttribute="height" secondItem="QoD-lQ-9tx" secondAttribute="height" id="9oo-9H-7d3"/>
                                     <constraint firstItem="tfj-Nb-TLm" firstAttribute="leading" secondItem="YNb-8O-yYu" secondAttribute="leading" id="beN-Ya-FqM"/>
                                     <constraint firstAttribute="bottom" secondItem="tfj-Nb-TLm" secondAttribute="bottom" id="gpn-HG-s3o"/>
                                     <constraint firstItem="tfj-Nb-TLm" firstAttribute="width" secondItem="QoD-lQ-9tx" secondAttribute="width" id="qk7-EI-nFl"/>
