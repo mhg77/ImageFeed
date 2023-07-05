@@ -14,13 +14,6 @@ final class ImagesListViewController: UIViewController {
     
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
     
-    private lazy var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,7 +39,7 @@ extension ImagesListViewController {
         }
         
         cell.cellImageView.image = image
-        cell.dateLabel.text = dateFormatter.string(from: Date())
+        cell.dateLabel.text = Date().dateTimeString
         
         let isLiked = indexPath.row % 2 == 0
         let likeImage = isLiked ? UIImage(named: "LikeOn") : UIImage(named: "LikeOff")
