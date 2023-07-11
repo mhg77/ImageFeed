@@ -162,7 +162,7 @@
                                     <constraint firstAttribute="width" constant="48" id="tad-2X-3Vj"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="Backward button"/>
+                                <state key="normal" image="Backward button white"/>
                                 <connections>
                                     <action selector="didTapBackButton" destination="n63-ls-w1d" eventType="touchUpInside" id="pzz-M7-yFs"/>
                                 </connections>
@@ -249,9 +249,40 @@
                     <view key="view" contentMode="scaleToFill" id="IEO-fY-thB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwD-gp-z4f">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" name="YP White (iOS)"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGA-4S-vqd">
+                                <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="fMn-KZ-2zB"/>
+                                    <constraint firstAttribute="height" constant="48" id="tjK-cB-abQ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Backward button black"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="B0O-Kv-sSD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gwD-gp-z4f" secondAttribute="bottom" id="9gI-Yu-CRz"/>
+                            <constraint firstAttribute="trailing" secondItem="gwD-gp-z4f" secondAttribute="trailing" id="Fd7-iF-R3T"/>
+                            <constraint firstItem="iGA-4S-vqd" firstAttribute="top" secondItem="B0O-Kv-sSD" secondAttribute="top" constant="8" id="JPm-qT-TP8"/>
+                            <constraint firstItem="iGA-4S-vqd" firstAttribute="leading" secondItem="B0O-Kv-sSD" secondAttribute="leading" constant="8" id="NXO-SI-6c4"/>
+                            <constraint firstItem="gwD-gp-z4f" firstAttribute="top" secondItem="IEO-fY-thB" secondAttribute="top" id="ciO-bO-8xo"/>
+                            <constraint firstItem="gwD-gp-z4f" firstAttribute="leading" secondItem="IEO-fY-thB" secondAttribute="leading" id="tJf-SD-XRy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="iGA-4S-vqd" id="GXm-9P-bEy"/>
+                        <outlet property="webView" destination="gwD-gp-z4f" id="Dyl-jl-OCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDX-fe-gNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,7 +325,8 @@
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="Auth" width="60" height="60"/>
-        <image name="Backward button" width="24" height="24"/>
+        <image name="Backward button black" width="24" height="24"/>
+        <image name="Backward button white" width="24" height="24"/>
         <image name="LikeOn" width="42" height="42"/>
         <image name="Share button" width="50" height="50"/>
         <image name="Tab editorial active" width="30" height="30"/>
