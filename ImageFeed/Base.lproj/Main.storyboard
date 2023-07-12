@@ -156,10 +156,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej0-xB-plB" userLabel="Backward button">
-                                <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                <rect key="frame" x="8" y="55" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="8xn-Pr-1e5"/>
-                                    <constraint firstAttribute="width" constant="48" id="tad-2X-3Vj"/>
+                                    <constraint firstAttribute="height" constant="24" id="8xn-Pr-1e5"/>
+                                    <constraint firstAttribute="width" constant="24" id="tad-2X-3Vj"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="Backward button white"/>
@@ -172,13 +172,13 @@
                         <color key="backgroundColor" name="YP Black (iOS)"/>
                         <constraints>
                             <constraint firstItem="1YI-Il-S2z" firstAttribute="centerX" secondItem="rbt-Jk-YTV" secondAttribute="centerX" id="48r-9m-vuB"/>
-                            <constraint firstItem="ej0-xB-plB" firstAttribute="leading" secondItem="rbt-Jk-YTV" secondAttribute="leading" constant="8" id="Kfm-vJ-Ff6"/>
+                            <constraint firstItem="ej0-xB-plB" firstAttribute="leading" secondItem="gwh-dI-yQP" secondAttribute="leading" constant="8" id="Kfm-vJ-Ff6"/>
                             <constraint firstItem="rbt-Jk-YTV" firstAttribute="trailing" secondItem="YNb-8O-yYu" secondAttribute="trailing" id="WeQ-2G-Hi6"/>
                             <constraint firstItem="YNb-8O-yYu" firstAttribute="leading" secondItem="rbt-Jk-YTV" secondAttribute="leading" id="eBp-BM-nhr"/>
                             <constraint firstItem="rbt-Jk-YTV" firstAttribute="bottom" secondItem="1YI-Il-S2z" secondAttribute="bottom" constant="36" id="gbz-VB-jQ5"/>
                             <constraint firstAttribute="bottom" secondItem="YNb-8O-yYu" secondAttribute="bottom" id="mms-iN-X95"/>
                             <constraint firstItem="YNb-8O-yYu" firstAttribute="top" secondItem="gwh-dI-yQP" secondAttribute="top" id="qfY-B6-ynD"/>
-                            <constraint firstItem="ej0-xB-plB" firstAttribute="top" secondItem="rbt-Jk-YTV" secondAttribute="top" constant="8" id="r1J-WR-9K8"/>
+                            <constraint firstItem="ej0-xB-plB" firstAttribute="top" secondItem="gwh-dI-yQP" secondAttribute="top" constant="55" id="r1J-WR-9K8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qs7-bZ-kw6"/>
@@ -259,28 +259,36 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGA-4S-vqd">
-                                <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                <rect key="frame" x="8" y="55" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="fMn-KZ-2zB"/>
-                                    <constraint firstAttribute="height" constant="48" id="tjK-cB-abQ"/>
+                                    <constraint firstAttribute="width" constant="24" id="fMn-KZ-2zB"/>
+                                    <constraint firstAttribute="height" constant="24" id="tjK-cB-abQ"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="Backward button black"/>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ykv-x6-WSU">
+                                <rect key="frame" x="0.0" y="79" width="414" height="4"/>
+                                <color key="tintColor" name="YP Black (iOS)"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B0O-Kv-sSD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="gwD-gp-z4f" secondAttribute="bottom" id="9gI-Yu-CRz"/>
                             <constraint firstAttribute="trailing" secondItem="gwD-gp-z4f" secondAttribute="trailing" id="Fd7-iF-R3T"/>
-                            <constraint firstItem="iGA-4S-vqd" firstAttribute="top" secondItem="B0O-Kv-sSD" secondAttribute="top" constant="8" id="JPm-qT-TP8"/>
-                            <constraint firstItem="iGA-4S-vqd" firstAttribute="leading" secondItem="B0O-Kv-sSD" secondAttribute="leading" constant="8" id="NXO-SI-6c4"/>
+                            <constraint firstItem="ykv-x6-WSU" firstAttribute="top" secondItem="iGA-4S-vqd" secondAttribute="bottom" id="Fsb-7U-4Ne"/>
+                            <constraint firstItem="iGA-4S-vqd" firstAttribute="top" secondItem="IEO-fY-thB" secondAttribute="top" constant="55" id="JPm-qT-TP8"/>
+                            <constraint firstItem="iGA-4S-vqd" firstAttribute="leading" secondItem="IEO-fY-thB" secondAttribute="leading" constant="8" id="NXO-SI-6c4"/>
+                            <constraint firstItem="ykv-x6-WSU" firstAttribute="leading" secondItem="IEO-fY-thB" secondAttribute="leading" id="Qjd-XY-BRA"/>
                             <constraint firstItem="gwD-gp-z4f" firstAttribute="top" secondItem="IEO-fY-thB" secondAttribute="top" id="ciO-bO-8xo"/>
+                            <constraint firstAttribute="trailing" secondItem="ykv-x6-WSU" secondAttribute="trailing" id="g64-Ah-wUE"/>
                             <constraint firstItem="gwD-gp-z4f" firstAttribute="leading" secondItem="IEO-fY-thB" secondAttribute="leading" id="tJf-SD-XRy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="iGA-4S-vqd" id="GXm-9P-bEy"/>
+                        <outlet property="progressView" destination="ykv-x6-WSU" id="ley-nQ-TIB"/>
                         <outlet property="webView" destination="gwD-gp-z4f" id="Dyl-jl-OCm"/>
                     </connections>
                 </viewController>
