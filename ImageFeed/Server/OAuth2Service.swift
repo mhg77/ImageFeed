@@ -17,8 +17,8 @@ final class OAuth2Service {
     
     func fetchOAuthToken(code: String, completion: @escaping (Result<String, Error>) -> Void) {
         
-        guard var urlComponents = URLComponents(string: AccessTokenURL) else {
-            assertionFailure("Failed to make urlComponents from \(AccessTokenURL)")
+        guard var urlComponents = URLComponents(string: accessTokenURL) else {
+            assertionFailure("Failed to make urlComponents from \(accessTokenURL)")
             return
         }
         urlComponents.queryItems = [
