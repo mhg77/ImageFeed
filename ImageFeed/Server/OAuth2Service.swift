@@ -66,7 +66,9 @@ final class OAuth2Service {
                         completion(.success(responseBody.accessToken))
                     }
                 } catch {
-                    assertionFailure("Decode error - \(error)")
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
                 }
             }
         }
