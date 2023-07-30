@@ -26,6 +26,7 @@
 		27FCC2492A5F4FDF005BC64D /* OAuth2TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FCC2482A5F4FDF005BC64D /* OAuth2TokenStorage.swift */; };
 		27FCC24C2A5F50AF005BC64D /* OAuthTokenResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FCC24B2A5F50AF005BC64D /* OAuthTokenResponseBody.swift */; };
 		27FCC24E2A6098AB005BC64D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FCC24D2A6098AB005BC64D /* SplashViewController.swift */; };
+		27FFA7812A76E861003B8DE8 /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFA7802A76E861003B8DE8 /* UIBlockingProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		27FCC2482A5F4FDF005BC64D /* OAuth2TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2TokenStorage.swift; sourceTree = "<group>"; };
 		27FCC24B2A5F50AF005BC64D /* OAuthTokenResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenResponseBody.swift; sourceTree = "<group>"; };
 		27FCC24D2A6098AB005BC64D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		27FFA7802A76E861003B8DE8 /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				2730EB9D2A2CAAC30099E765 /* Main.storyboard */,
 				2730EB972A2CAAC30099E765 /* AppDelegate.swift */,
 				2730EB992A2CAAC30099E765 /* SceneDelegate.swift */,
+				27FFA7802A76E861003B8DE8 /* UIBlockingProgressHUD.swift */,
 				27FCC23F2A5DCCCC005BC64D /* Constants.swift */,
 			);
 			path = ImageFeed;
@@ -249,6 +252,7 @@
 				2730EB9C2A2CAAC30099E765 /* ImagesListViewController.swift in Sources */,
 				27FCC23E2A55C9FE005BC64D /* Date+Extensions.swift in Sources */,
 				27FCC2472A5F4FBF005BC64D /* OAuth2Service.swift in Sources */,
+				27FFA7812A76E861003B8DE8 /* UIBlockingProgressHUD.swift in Sources */,
 				27FCC2422A5DE6CE005BC64D /* AuthViewController.swift in Sources */,
 				2745374D2A30F2FD00E7426F /* ImagesListCell.swift in Sources */,
 				27FCC2452A5DE868005BC64D /* WebViewViewController.swift in Sources */,
