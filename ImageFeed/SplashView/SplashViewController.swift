@@ -71,6 +71,7 @@ extension SplashViewController: AuthViewControllerDelegate {
             case .success(let token):
                 self.oauth2TokenStorage.token = token
                 self.switchToTabBarController()
+                ProgressHUD.dismiss()
             case .failure(let error):
                 ProgressHUD.dismiss()
                 print(error)
