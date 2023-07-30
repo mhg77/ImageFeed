@@ -72,7 +72,6 @@ extension SplashViewController: AuthViewControllerDelegate {
             case .success(let token):
                 self.oauth2TokenStorage.token = token
                 fetchProfile(with: token)
-                UIBlockingProgressHUD.dismiss()
             case .failure(let error):
                 UIBlockingProgressHUD.dismiss()
                 assertionFailure(error.localizedDescription)
@@ -85,12 +84,13 @@ extension SplashViewController: AuthViewControllerDelegate {
             guard let self = self else { return }
             
             switch result {
-            case .success:
+            case .success(let profile):
+                ProfileImageService.shared.fetchProfileImageURL(username: profile.username) { _ in }
                 UIBlockingProgressHUD.dismiss()
                 self.switchToTabBarController()
             case .failure(let error):
                 UIBlockingProgressHUD.dismiss()
-                print(error)
+                assertionFailure(error.localizedDescription)
             }
         }
     }

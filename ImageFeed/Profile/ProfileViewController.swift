@@ -57,6 +57,20 @@ final class ProfileViewController: UIViewController {
         return button
     }()
     
+    override init(nibName: String?, bundle: Bundle?) {
+        super.init(nibName: nibName, bundle: bundle)
+        addObserver()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        addObserver()
+    }
+    
+    deinit {
+        removeObserver()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +84,10 @@ final class ProfileViewController: UIViewController {
         
         constraintsSet()
         updateProfileDetails()
+        
+        if let avavtarURL = ProfileImageService.shared.avatarURL,
+                   let url = URL(string: avavtarURL) {
+        }
     }
     
     private func updateProfileDetails() {
@@ -100,6 +118,32 @@ final class ProfileViewController: UIViewController {
             logoutButton.widthAnchor.constraint(equalToConstant: 44)
             
         ])
+    }
+    
+    private func addObserver() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(updateAvatar(notification:)),
+            name: ProfileImageService.DidChangeNotification,
+            object: nil
+        )
+    }
+    
+    private func removeObserver() {
+        NotificationCenter.default.removeObserver(
+            self,
+            name: ProfileImageService.DidChangeNotification,
+            object: nil
+        )
+    }
+    
+    @objc private func updateAvatar(notification: Notification) {
+        guard
+            isViewLoaded,
+            let userInfo = notification.userInfo,
+            let profileImageURL = userInfo["URL"] as? String,
+            let url = URL(string: profileImageURL)
+        else { return }
     }
     
     @objc private func didTapLogoutButton() {
