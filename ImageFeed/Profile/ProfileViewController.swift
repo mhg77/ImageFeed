@@ -9,6 +9,8 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
+    private let profileService = ProfileService.shared
+    
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Profile image")
@@ -67,6 +69,13 @@ final class ProfileViewController: UIViewController {
         view.addSubview(logoutButton)
         
         constraintsSet()
+        updateProfileDetails()
+    }
+    
+    private func updateProfileDetails() {
+        nameLabel.text = profileService.profile?.name
+        profileNameLabel.text = profileService.profile?.loginName
+        descriptionLabel.text = profileService.profile?.bio
     }
     
     private func constraintsSet() {
