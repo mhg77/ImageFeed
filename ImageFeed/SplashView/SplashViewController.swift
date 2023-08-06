@@ -9,6 +9,7 @@ import UIKit
 import ProgressHUD
 
 final class SplashViewController: UIViewController {
+    private var networkService = OAuth2Service.shared
     private let profileService = ProfileService.shared
     private let ShowAuthenticationScreenSegueIdentifier = "ShowAuthenticationScreen"
     
@@ -21,7 +22,9 @@ final class SplashViewController: UIViewController {
         if let token = oauth2TokenStorage.token {
             fetchProfile(with: token)
         } else {
-            performSegue(withIdentifier: ShowAuthenticationScreenSegueIdentifier, sender: nil)
+            if !networkService.isLoading {
+                performSegue(withIdentifier: ShowAuthenticationScreenSegueIdentifier, sender: nil)
+            }
         }
     }
     
@@ -59,8 +62,8 @@ extension SplashViewController {
 extension SplashViewController: AuthViewControllerDelegate {
     func authViewController(_ vc: AuthViewController, didAuthenticateWithCode code: String) {
         UIBlockingProgressHUD.show()
-        dismiss(animated: true) { [weak self] in
-            guard let self = self else { return }
+        networkService.isLoading = true
+        dismiss(animated: true) {
             self.fetchOAuthToken(code)
         }
     }
