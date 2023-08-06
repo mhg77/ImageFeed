@@ -23,7 +23,7 @@ final class SplashViewController: UIViewController {
             fetchProfile(with: token)
         } else {
             if !networkService.isLoading {
-                performSegue(withIdentifier: ShowAuthenticationScreenSegueIdentifier, sender: nil)
+                performSegue(withIdentifier: showAuthenticationScreenSegueIdentifier, sender: nil)
             }
         }
     }
