@@ -166,7 +166,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="W04-gm-5oe">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarViewController" id="BaX-oH-fFj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="BaX-oH-fFj" customClass="TabBarController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sav-rf-Rfz"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hB5-br-vov">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -177,10 +177,6 @@
                             <color key="backgroundColor" name="YP Black (iOS)"/>
                         </tabBarAppearance>
                     </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="m9Z-WN-t6T"/>
-                        <segue destination="5NZ-6V-o9x" kind="relationship" relationship="viewControllers" id="u7O-NQ-1vZ"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQt-jU-Deb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,7 +185,7 @@
         <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="ImageList" id="BYZ-38-t0r" customClass="ImagesListViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImagesListViewController" title="ImageList" id="BYZ-38-t0r" customClass="ImagesListViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,21 +341,6 @@
             </objects>
             <point key="canvasLocation" x="851" y="-315"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="9YW-MV-LLO">
-            <objects>
-                <viewController title="Profile" id="5NZ-6V-o9x" customClass="ProfileViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LEf-9y-par">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="mrv-Gz-i2n"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="Tab profile active" id="AwE-Zx-fyv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xl4-rB-Dx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-130" y="453"/>
-        </scene>
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
@@ -370,7 +351,6 @@
         <image name="LikeOn" width="42" height="42"/>
         <image name="Share button" width="50" height="50"/>
         <image name="Tab editorial active" width="30" height="30"/>
-        <image name="Tab profile active" width="30" height="30"/>
         <namedColor name="YP Black (iOS)">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
