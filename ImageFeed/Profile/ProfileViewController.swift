@@ -85,9 +85,10 @@ final class ProfileViewController: UIViewController {
     }
     
     private func updateProfileDetails() {
-        nameLabel.text = profileService.profile?.name
-        profileNameLabel.text = profileService.profile?.loginName
-        descriptionLabel.text = profileService.profile?.bio
+        guard let profile = profileService.profile else { return }
+        nameLabel.text = "\(profile.firstName) \(profile.lastName ?? "")"
+        profileNameLabel.text = "@\(profile.username)"
+        descriptionLabel.text = profile.bio
         if let avavtarURL = ProfileImageService.shared.avatarURL,
            let url = URL(string: avavtarURL) {
             let processor = RoundCornerImageProcessor(cornerRadius: 25)
