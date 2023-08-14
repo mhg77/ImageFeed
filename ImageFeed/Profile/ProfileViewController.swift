@@ -86,6 +86,7 @@ final class ProfileViewController: UIViewController {
     
     private func updateProfileDetails() {
         guard let profile = profileService.profile else { return }
+        profileImageView.contentMode = .scaleAspectFill
         nameLabel.text = "\(profile.firstName) \(profile.lastName ?? "")"
         profileNameLabel.text = "@\(profile.username)"
         descriptionLabel.text = profile.bio
@@ -123,6 +124,8 @@ final class ProfileViewController: UIViewController {
             logoutButton.widthAnchor.constraint(equalToConstant: 44)
             
         ])
+        profileImageView.layer.cornerRadius = 35
+        profileImageView.layer.masksToBounds = true
     }
     
     private func addObserver() {
@@ -147,7 +150,7 @@ final class ProfileViewController: UIViewController {
             isViewLoaded,
             let userInfo = notification.userInfo,
             let profileImageURL = userInfo["URL"] as? String,
-            let url = URL(string: profileImageURL)
+            let _ = URL(string: profileImageURL)
         else { return }
     }
     
