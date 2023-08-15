@@ -6,14 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ProfileViewController: UIViewController {
     
+    private let profileService = ProfileService.shared
+    
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Profile image")
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = imageView.frame.width / 2
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -55,6 +55,20 @@ final class ProfileViewController: UIViewController {
         return button
     }()
     
+    override init(nibName: String?, bundle: Bundle?) {
+        super.init(nibName: nibName, bundle: bundle)
+        addObserver()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        addObserver()
+    }
+    
+    deinit {
+        removeObserver()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,6 +81,25 @@ final class ProfileViewController: UIViewController {
         view.addSubview(logoutButton)
         
         constraintsSet()
+        updateProfileDetails()
+    }
+    
+    private func updateProfileDetails() {
+        guard let profile = profileService.profile else { return }
+        profileImageView.contentMode = .scaleAspectFill
+        nameLabel.text = "\(profile.firstName) \(profile.lastName ?? "")"
+        profileNameLabel.text = "@\(profile.username)"
+        descriptionLabel.text = profile.bio
+        if let avavtarURL = ProfileImageService.shared.avatarURL,
+           let url = URL(string: avavtarURL) {
+            let processor = RoundCornerImageProcessor(cornerRadius: 25)
+            
+            profileImageView.kf.setImage(
+                with: url,
+                placeholder: UIImage(named: "Placeholder"),
+                options: [.processor(processor), .transition(.fade(1))]
+            )
+        }
     }
     
     private func constraintsSet() {
@@ -91,6 +124,34 @@ final class ProfileViewController: UIViewController {
             logoutButton.widthAnchor.constraint(equalToConstant: 44)
             
         ])
+        profileImageView.layer.cornerRadius = 35
+        profileImageView.layer.masksToBounds = true
+    }
+    
+    private func addObserver() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(updateAvatar(notification:)),
+            name: ProfileImageService.DidChangeNotification,
+            object: nil
+        )
+    }
+    
+    private func removeObserver() {
+        NotificationCenter.default.removeObserver(
+            self,
+            name: ProfileImageService.DidChangeNotification,
+            object: nil
+        )
+    }
+    
+    @objc private func updateAvatar(notification: Notification) {
+        guard
+            isViewLoaded,
+            let userInfo = notification.userInfo,
+            let profileImageURL = userInfo["URL"] as? String,
+            let _ = URL(string: profileImageURL)
+        else { return }
     }
     
     @objc private func didTapLogoutButton() {
