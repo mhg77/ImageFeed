@@ -122,12 +122,11 @@ extension SplashViewController: AuthViewControllerDelegate {
             switch result {
             case .success(let profile):
                 ProfileImageService.shared.fetchProfileImageURL(username: profile.username) { _ in }
-                UIBlockingProgressHUD.dismiss()
                 self.switchToTabBarController()
             case .failure(let error):
-                UIBlockingProgressHUD.dismiss()
                 assertionFailure(error.localizedDescription)
             }
+            UIBlockingProgressHUD.dismiss()
         }
     }
 }
